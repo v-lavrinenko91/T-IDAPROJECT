@@ -1,0 +1,292 @@
+@import 'variables.scss';
+@import 'global.scss';
+
+
+/* Основная навигация */
+
+.main-nav {
+  float: left;
+  width: 318px;
+  .main-nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+		font-size: 0;
+    background-color: #191c24;
+		.main-nav__item {
+			@media (max-width: 1000px) {
+				display: inline-block;
+			}
+			
+			@media (max-width: 768px) {
+				display: block;
+			}
+		}
+    .main-nav__item a {
+      display: block;
+      padding: 25px 30px;
+			border-top: 1px solid #20232b;
+      font-family: 'Open Sans Bold';
+      font-size: 18px;
+      line-height: 24px;
+      text-decoration: none;
+      color: #fff;
+      &:hover {
+        background-color: #1f2229;
+      }
+			&.active {
+				color: #808592;
+				background-color: #2a2d37;
+				cursor: default;
+			}
+			&.exit {
+				color: #808592;
+			}
+			
+			@media (max-width: 1000px) {
+				padding: 25px 20px;
+				font-size: 16px;
+			}
+			
+			@media (max-width: 480px) {
+				text-align: center;
+			}
+    }
+  }
+	
+	@media (max-width: 1000px) {
+		float: none;
+		width: 768px;
+	}
+	
+	@media (max-width: 768px) {
+		width: 480px;
+	}
+	
+	@media (max-width: 480px) {
+		width: 320px;
+	}
+}
+
+/* Конец основной навигации */
+
+/* Блок оплаты картой */
+
+.payment {
+  float: right;
+  width: 640px;
+  background-color: #f7f8f8;
+  
+  /* Информация об оплате */
+  
+  .payment__info {
+    padding: 43px 30px 0;
+    font-size: 16px;
+    line-height: 21px;
+		color: #8494ab;
+		p {
+			margin: 0;
+			margin-bottom: 10px;
+			&:first-child {
+				margin-bottom: 20px;
+			}
+		}
+    span {
+      margin-left: 40px;
+      color: #535864;
+			&.payment__account-number {
+				margin-left: 62px;
+			}
+			
+			@media (max-width: 480px) {
+				display: block;
+				margin-top: 5px;
+				margin-left: 0;
+				&.payment__account-number {
+				margin-left: 0;
+			}
+			}
+    }
+  }
+  
+  /* Конец информации об оплате */
+  
+  h2 {
+    margin: 25px 30px 0;
+		
+		@media (max-width: 480px) {
+				text-align: center;
+			}
+  }
+  
+  /* Форма оплаты */
+  
+  .payment-form {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 45px;
+    padding: 0 30px;
+    font-size: 16px;
+    line-height: 21px;
+		color: #8494ab;
+    .card-side {
+      width: 320px;
+      border: 1px solid #e4e9ee;
+      border-radius: 10px;
+      padding: 20px 15px;
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input, select {
+        padding: 10px;
+        border: 1px solid #e4e9ee;
+        color: #373c43;
+        background-color: #fff;
+				
+				@media (max-width: 480px) {
+					margin-bottom: 15px;
+					padding: 7px;
+				}
+      }
+      input[type='text'].payment-form__card-number {
+        width: 65px;
+				margin-top: 0;
+        margin-right: 9px;
+        margin-bottom: 15px;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+				
+				@media (max-width: 480px) {
+					width: 55px;
+					margin-right: 5px;
+				}
+				
+      }
+       input[type='text'] {
+        margin-top: 12px;
+        width: 100%;
+        box-sizing: border-box;
+				&::-webkit-input-placeholder {
+					color: $placeholder-color;
+				}
+				&::-moz-placeholder {
+					color: $placeholder-color;
+				}
+				&:-moz-placeholder {
+					color: $placeholder-color;
+				}
+				&:-ms-input-placeholder {
+					color: $placeholder-color;
+				}
+      }
+			select {
+				margin-right: 9px;
+        padding-right: 40px;
+        background-image: url('../img/arrow-icon.png');
+        background-repeat: no-repeat;
+        background-position: 90%;	
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        &::-ms-expand {
+        display: none;
+        }
+			}
+			
+			@media (max-width: 480px) {
+				width: 260px;
+			}
+    }
+    .payment-form__front-card-side {
+      position: relative;
+      z-index: 10;
+      background-color: #f7f8f8;
+    }
+    .payment-form__rear-card-side {
+      position: absolute;
+      top: 21px;
+      left: 235px;
+			width: 340px;
+      padding-top: 86px;
+      padding-bottom: 87px;
+      padding-right: 0;
+      text-align: right;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 42px;
+        background-color: #e4e9ee;
+      }
+      label {
+        padding-right: 23px;
+        text-align: right;
+      }
+      input.payment-form__user-cvv2 {
+        width: 138px;
+        margin-right: 14px;
+        box-sizing: border-box;
+        background-image: url('../img/question-icon.png');
+        background-repeat: no-repeat;
+        background-position: 90%;	
+      }
+			
+			@media (max-width: 768px) {
+				position: relative;
+				top: 0;
+				left: 0;
+				margin-top: 20px;
+			}
+      
+      @media (max-width: 480px) {
+				width: 275px;
+			}
+			
+    }
+    .btn {
+      margin-top: 40px;
+			
+			@media (max-width: 480px) {
+				margin-top: 30px;
+        margin-left: 70px;
+			}
+    }
+		
+		@media (max-width: 480px) {
+				padding: 0 15px;
+			}
+  }
+  
+  /* Конец формы оплаты */
+  
+  /* Дополнительная информация об оплате */
+  
+  .payment__add-info {
+    padding: 25px 30px;
+    background-color: #373c43;
+  }
+	
+	@media (max-width: 1000px) {
+		float: none;
+		width: 768px;
+	}
+	
+	@media (max-width: 768px) {
+		width: 480px;
+	}
+	
+	@media (max-width: 480px) {
+		width: 320px;
+	}
+  
+  /* Конец дополнительной информация об оплате */
+}
+
+/* Конец блока оплаты картой */

@@ -1,0 +1,274 @@
+@charset "UTF-8";
+/* Основные настройки стилей */
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url("../fonts/Open Sans Bold/OpenSans-Bold.eot");
+  src: url("../fonts/Open Sans Bold/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Open Sans Bold/OpenSans-Bold.woff") format("woff"), url("../fonts/Open Sans Bold/OpenSans-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  color: #7f8591;
+  background-color: #101114; }
+
+.container {
+  width: 960px;
+  margin: 80px auto; }
+  @media (max-width: 1000px) {
+    .container {
+      width: 768px; } }
+  @media (max-width: 768px) {
+    .container {
+      width: 480px;
+      margin: 20px auto; } }
+  @media (max-width: 480px) {
+    .container {
+      width: 320px; } }
+
+h2 {
+  margin: 0;
+  font-family: 'Open Sans Bold';
+  font-size: 22px;
+  line-height: 26px;
+  color: #383d43; }
+
+.btn {
+  border: none;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  padding: 11px 31px;
+  font-family: 'Open Sans Bold';
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  background-color: #0057b9; }
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both; }
+
+/* Основная навигация */
+.main-nav {
+  float: left;
+  width: 318px; }
+  .main-nav .main-nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    background-color: #191c24; }
+    @media (max-width: 1000px) {
+      .main-nav .main-nav__list .main-nav__item {
+        display: inline-block; } }
+    @media (max-width: 768px) {
+      .main-nav .main-nav__list .main-nav__item {
+        display: block; } }
+    .main-nav .main-nav__list .main-nav__item a {
+      display: block;
+      padding: 25px 30px;
+      border-top: 1px solid #20232b;
+      font-family: 'Open Sans Bold';
+      font-size: 18px;
+      line-height: 24px;
+      text-decoration: none;
+      color: #fff; }
+      .main-nav .main-nav__list .main-nav__item a:hover {
+        background-color: #1f2229; }
+      .main-nav .main-nav__list .main-nav__item a.active {
+        color: #808592;
+        background-color: #2a2d37;
+        cursor: default; }
+      .main-nav .main-nav__list .main-nav__item a.exit {
+        color: #808592; }
+      @media (max-width: 1000px) {
+        .main-nav .main-nav__list .main-nav__item a {
+          padding: 25px 20px;
+          font-size: 16px; } }
+      @media (max-width: 480px) {
+        .main-nav .main-nav__list .main-nav__item a {
+          text-align: center; } }
+  @media (max-width: 1000px) {
+    .main-nav {
+      float: none;
+      width: 768px; } }
+  @media (max-width: 768px) {
+    .main-nav {
+      width: 480px; } }
+  @media (max-width: 480px) {
+    .main-nav {
+      width: 320px; } }
+
+/* Конец основной навигации */
+/* Блок оплаты картой */
+.payment {
+  float: right;
+  width: 640px;
+  background-color: #f7f8f8;
+  /* Информация об оплате */
+  /* Конец информации об оплате */
+  /* Форма оплаты */
+  /* Конец формы оплаты */
+  /* Дополнительная информация об оплате */
+  /* Конец дополнительной информация об оплате */ }
+  .payment .payment__info {
+    padding: 43px 30px 0;
+    font-size: 16px;
+    line-height: 21px;
+    color: #8494ab; }
+    .payment .payment__info p {
+      margin: 0;
+      margin-bottom: 10px; }
+      .payment .payment__info p:first-child {
+        margin-bottom: 20px; }
+    .payment .payment__info span {
+      margin-left: 40px;
+      color: #535864; }
+      .payment .payment__info span.payment__account-number {
+        margin-left: 62px; }
+      @media (max-width: 480px) {
+        .payment .payment__info span {
+          display: block;
+          margin-top: 5px;
+          margin-left: 0; }
+          .payment .payment__info span.payment__account-number {
+            margin-left: 0; } }
+  .payment h2 {
+    margin: 25px 30px 0; }
+    @media (max-width: 480px) {
+      .payment h2 {
+        text-align: center; } }
+  .payment .payment-form {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 45px;
+    padding: 0 30px;
+    font-size: 16px;
+    line-height: 21px;
+    color: #8494ab; }
+    .payment .payment-form .card-side {
+      width: 320px;
+      border: 1px solid #e4e9ee;
+      -webkit-border-radius: 10px;
+              border-radius: 10px;
+      padding: 20px 15px; }
+      .payment .payment-form .card-side label {
+        display: block;
+        margin-bottom: 5px; }
+      .payment .payment-form .card-side input, .payment .payment-form .card-side select {
+        padding: 10px;
+        border: 1px solid #e4e9ee;
+        color: #373c43;
+        background-color: #fff; }
+        @media (max-width: 480px) {
+          .payment .payment-form .card-side input, .payment .payment-form .card-side select {
+            margin-bottom: 15px;
+            padding: 7px; } }
+      .payment .payment-form .card-side input[type='text'].payment-form__card-number {
+        width: 65px;
+        margin-top: 0;
+        margin-right: 9px;
+        margin-bottom: 15px; }
+        .payment .payment-form .card-side input[type='text'].payment-form__card-number::-webkit-outer-spin-button, .payment .payment-form .card-side input[type='text'].payment-form__card-number::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0; }
+        @media (max-width: 480px) {
+          .payment .payment-form .card-side input[type='text'].payment-form__card-number {
+            width: 55px;
+            margin-right: 5px; } }
+      .payment .payment-form .card-side input[type='text'] {
+        margin-top: 12px;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; }
+        .payment .payment-form .card-side input[type='text']::-webkit-input-placeholder {
+          color: #bec6cf; }
+        .payment .payment-form .card-side input[type='text']::-moz-placeholder {
+          color: #bec6cf; }
+        .payment .payment-form .card-side input[type='text']:-moz-placeholder {
+          color: #bec6cf; }
+        .payment .payment-form .card-side input[type='text']:-ms-input-placeholder {
+          color: #bec6cf; }
+      .payment .payment-form .card-side select {
+        margin-right: 9px;
+        padding-right: 40px;
+        background-image: url("../img/arrow-icon.png");
+        background-repeat: no-repeat;
+        background-position: 90%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none; }
+        .payment .payment-form .card-side select::-ms-expand {
+          display: none; }
+      @media (max-width: 480px) {
+        .payment .payment-form .card-side {
+          width: 260px; } }
+    .payment .payment-form .payment-form__front-card-side {
+      position: relative;
+      z-index: 10;
+      background-color: #f7f8f8; }
+    .payment .payment-form .payment-form__rear-card-side {
+      position: absolute;
+      top: 21px;
+      left: 235px;
+      width: 340px;
+      padding-top: 86px;
+      padding-bottom: 87px;
+      padding-right: 0;
+      text-align: right; }
+      .payment .payment-form .payment-form__rear-card-side::before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 42px;
+        background-color: #e4e9ee; }
+      .payment .payment-form .payment-form__rear-card-side label {
+        padding-right: 23px;
+        text-align: right; }
+      .payment .payment-form .payment-form__rear-card-side input.payment-form__user-cvv2 {
+        width: 138px;
+        margin-right: 14px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        background-image: url("../img/question-icon.png");
+        background-repeat: no-repeat;
+        background-position: 90%; }
+      @media (max-width: 768px) {
+        .payment .payment-form .payment-form__rear-card-side {
+          position: relative;
+          top: 0;
+          left: 0;
+          margin-top: 20px; } }
+      @media (max-width: 480px) {
+        .payment .payment-form .payment-form__rear-card-side {
+          width: 275px; } }
+    .payment .payment-form .btn {
+      margin-top: 40px; }
+      @media (max-width: 480px) {
+        .payment .payment-form .btn {
+          margin-top: 30px;
+          margin-left: 70px; } }
+    @media (max-width: 480px) {
+      .payment .payment-form {
+        padding: 0 15px; } }
+  .payment .payment__add-info {
+    padding: 25px 30px;
+    background-color: #373c43; }
+  @media (max-width: 1000px) {
+    .payment {
+      float: none;
+      width: 768px; } }
+  @media (max-width: 768px) {
+    .payment {
+      width: 480px; } }
+  @media (max-width: 480px) {
+    .payment {
+      width: 320px; } }
+
+/* Конец блока оплаты картой */
